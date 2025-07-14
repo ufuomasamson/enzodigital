@@ -36,14 +36,8 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
-    <!-- Hero Background Video & Overlay -->
-    <div id="hero-bg-wrap" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; overflow: hidden;">
-        <video id="hero-bg-video" autoplay loop muted playsinline style="width:100vw; height:100vh; object-fit:cover; min-width:100%; min-height:100%; position:absolute; top:0; left:0; z-index:0;">
-            <source src="img/background-video.mp4" type="video/mp4">
-        </video>
-        <div id="hero-bg-overlay" style="position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(255,255,255,0.18); z-index:1;"></div>
-    </div>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51" style="min-height:100vh; position:relative;">
+    <!-- ...existing code... -->
     <!-- Particle Background for Hero (optional, can be removed if not needed) -->
     <div id="particles-js" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;"></div>
     <!-- Spinner Start -->
@@ -84,15 +78,22 @@
 
 
     <!-- Header Start -->
-    <div class="container-fluid bg-light my-6 mt-0" id="home" style="position: relative; z-index: 3;">
-        <div class="container position-relative" style="z-index: 3;">
+    <div class="container-fluid bg-light my-6 mt-0" id="home" style="position: relative; z-index: 10; min-height:100vh; overflow:hidden;">
+        <!-- Hero Background Video & Overlay (now inside hero section) -->
+        <div id="hero-bg-wrap" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; overflow: hidden; pointer-events:none;">
+            <video id="hero-bg-video" autoplay loop muted playsinline style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; z-index:0;">
+                <source src="img/background-video.mp4" type="video/mp4">
+            </video>
+            <div id="hero-bg-overlay" style="position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(32, 21, 21, 0.52); z-index:1;"></div>
+        </div>
+        <div class="container position-relative" style="z-index: 100; min-height:100vh;">
             <div class="row g-5 align-items-center">
-                <div class="col-lg-6 py-6 pb-0 pt-lg-0">
-                    <h3 class="text-primary mb-3" data-aos="fade-up" data-aos-delay="100" style="position:relative; z-index:4;">I'm</h3>
-                    <h1 class="display-3 mb-3 typed-text-output d-inline" data-aos="fade-up" data-aos-delay="200" style="position:relative; z-index:4;">
-                        <span class="typed-text"></span>
+                <div class="col-lg-6 py-6 pb-0 pt-lg-0" style="position:relative; z-index:200;">
+                    <h3 class="text-primary mb-3" data-aos="fade-up" data-aos-delay="100" style="position:relative; z-index:201;">I'm</h3>
+                    <h1 class="mb-3 typed-text-output d-inline" data-aos="fade-up" data-aos-delay="200" style="position:relative; z-index:201; font-size:2.2rem; font-weight:700;">
+                        <span class="typed-text" style="color:#fafafa;">Augment Developer</span>
                     </h1>
-                    <div class="d-flex align-items-center pt-5" data-aos="fade-up" data-aos-delay="300" style="position:relative; z-index:4;">
+                    <div class="d-flex align-items-center pt-5" data-aos="fade-up" data-aos-delay="300" style="position:relative; z-index:201;">
                         <a href="https://grantedinvest.vercel.app" class="btn btn-primary py-3 px-4 me-5">View My Work</a>
                         <button type="button" class="btn-play" data-bs-toggle="modal"
                             data-src="https://youtu.be/xoeTQRYgVKg?si=ZKfdUoPh54mKslYo" data-bs-target="#videoModal">
@@ -101,7 +102,7 @@
                         <h5 class="ms-4 mb-0 d-none d-sm-block">Play Video</h5>
                     </div>
                 </div>
-                <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="400" style="position:relative; z-index:4;">
+                <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="400" style="position:relative; z-index:200;">
                     <img class="img-fluid" src="img/profile.png" alt="">
                 </div>
             </div>
