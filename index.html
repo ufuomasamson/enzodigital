@@ -37,9 +37,8 @@
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51" style="min-height:100vh; position:relative;">
-    <!-- ...existing code... -->
-    <!-- Particle Background for Hero (optional, can be removed if not needed) -->
-    <div id="particles-js" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;"></div>
+    <!-- Particle Background for Entire Site -->
+    <div id="particles-js" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events:none;"></div>
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
@@ -646,8 +645,8 @@
                     "number": { "value": 35 },
                     "color": { "value": "#00cfff" },
                     "shape": { "type": "circle" },
-                    "opacity": { "value": 0.15 },
-                    "size": { "value": 4 },
+                    "opacity": { "value": 0.35 }, // Increased opacity for more visible particles
+                    "size": { "value": 10 }, // Increased from 4 to 10
                     "move": { "enable": true, "speed": 1.5 }
                 },
                 "interactivity": {
