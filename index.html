@@ -30,9 +30,15 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <!-- AOS Animate On Scroll CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+    <!-- Particle Background for Hero -->
+    <div id="particles-js"></div>
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
@@ -43,7 +49,7 @@
 
 
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+    <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s" id="mainNav">
         <a href="index.html" class="navbar-brand d-block d-lg-none">
             <h1 class="text-primary fw-bold m-0">Enzo</h1>
         </a>
@@ -75,11 +81,12 @@
         <div class="container">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 py-6 pb-0 pt-lg-0">
-                    <h3 class="text-primary mb-3">I'm</h3>
-                    <h1 class="display-3 mb-3">Samson U, Enzo</h1>
-                    <h2 class="typed-text-output d-inline"></h2>
-                    <div class="typed-text d-none">Augment Developer, Full Stack Developer, Apps Developer</div>
-                    <div class="d-flex align-items-center pt-5">
+                    <h3 class="text-primary mb-3" data-aos="fade-up" data-aos-delay="100">I'm</h3>
+                    <h1 class="display-3 mb-3 typed-text-output d-inline" data-aos="fade-up" data-aos-delay="200">
+                        <span class="typed-text"></span>
+                    </h1>
+                    <div class="typed-text d-none"></div>
+                    <div class="d-flex align-items-center pt-5" data-aos="fade-up" data-aos-delay="300">
                         <a href="https://grantedinvest.vercel.app" class="btn btn-primary py-3 px-4 me-5">View My Work</a>
                         <button type="button" class="btn-play" data-bs-toggle="modal"
                             data-src="https://youtu.be/xoeTQRYgVKg?si=ZKfdUoPh54mKslYo" data-bs-target="#videoModal">
@@ -88,7 +95,7 @@
                         <h5 class="ms-4 mb-0 d-none d-sm-block">Play Video</h5>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="400">
                     <img class="img-fluid" src="img/profile.png" alt="">
                 </div>
             </div>
@@ -123,14 +130,14 @@
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="d-flex align-items-center mb-5">
+                    <div class="d-flex align-items-center mb-5" data-aos="fade-right" data-aos-delay="100">
                         <div class="years flex-shrink-0 text-center me-4">
                             <h1 class="display-1 mb-0">6</h1>
                             <h5 class="mb-0">Years</h5>
                         </div>
                         <h3 class="lh-base mb-0">of working experience as a Full Stack developer</h3>
                     </div>
-                    <p class="mb-4">I’m Enzo — a full-stack developer, product thinker, and creative builder based in [Location]. I combine logic and visuals to create digital tools that solve real problems. I’ve worked on everything from SaaS platforms to artistic generators and booking engines.</p>
+                    <p class="mb-4" data-aos="fade-right" data-aos-delay="200">I’m Enzo — a full-stack developer, product thinker, and creative builder based in [Location]. I combine logic and visuals to create digital tools that solve real problems. I’ve worked on everything from SaaS platforms to artistic generators and booking engines.</p>
                     <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Afordable Prices</p>
                     <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>High Quality Services</p>
                     <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>On Time Project Delivery</p>
@@ -138,10 +145,10 @@
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="row g-3 mb-4">
-                        <div class="col-sm-6">
+                        <div class="col-sm-6" data-aos="zoom-in" data-aos-delay="100">
                             <img class="img-fluid rounded" src="img/about-1.jpg" alt="">
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-sm-6" data-aos="zoom-in" data-aos-delay="200">
                             <img class="img-fluid rounded" src="img/about-2.jpg" alt="">
                         </div>
                     </div>
@@ -172,7 +179,7 @@
                     <h3 class="mb-4">My Skills</h3>
                     <div class="row align-items-center">
                         <div class="col-md-6">
-                            <div class="skill mb-4">
+                            <div class="skill mb-4" data-aos="fade-right" data-aos-delay="100">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="font-weight-bold">Node.js</h6>
                                     <h6 class="font-weight-bold">100%</h6>
@@ -181,7 +188,7 @@
                                     <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
-                            <div class="skill mb-4">
+                            <div class="skill mb-4" data-aos="fade-right" data-aos-delay="200">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="font-weight-bold">React.js/</h6>
                                     <h6 class="font-weight-bold">100%</h6>
@@ -190,7 +197,7 @@
                                     <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
-                            <div class="skill mb-4">
+                            <div class="skill mb-4" data-aos="fade-right" data-aos-delay="300">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="font-weight-bold">PHP</h6>
                                     <h6 class="font-weight-bold">100%</h6>
@@ -201,7 +208,7 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="skill mb-4">
+                            <div class="skill mb-4" data-aos="fade-left" data-aos-delay="100">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="font-weight-bold">Next.js</h6>
                                     <h6 class="font-weight-bold">90%</h6>
@@ -210,7 +217,7 @@
                                     <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
-                            <div class="skill mb-4">
+                            <div class="skill mb-4" data-aos="fade-left" data-aos-delay="200">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="font-weight-bold">Go</h6>
                                     <h6 class="font-weight-bold">100%</h6>
@@ -219,7 +226,7 @@
                                     <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
-                            <div class="skill mb-4">
+                            <div class="skill mb-4" data-aos="fade-left" data-aos-delay="300">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="font-weight-bold">Python</h6>
                                     <h6 class="font-weight-bold">85%</h6>
@@ -305,8 +312,8 @@
                 </div>
             </div>
             <div class="row g-4">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                <div class="col-lg-6 wow fadeInUp" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5 service-hover">
                         <div class="bg-icon flex-shrink-0 mb-3">
                             <i class="fa fa-crop-alt fa-2x text-dark"></i>
                         </div>
@@ -316,8 +323,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                <div class="col-lg-6 wow fadeInUp" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5 service-hover">
                         <div class="bg-icon flex-shrink-0 mb-3">
                             <i class="fa fa-code-branch fa-2x text-dark"></i>
                         </div>
@@ -373,7 +380,7 @@
                 </div>
             </div>
             <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.1s">
-                <div class="col-lg-4 col-md-6 portfolio-item first">
+                <div class="col-lg-4 col-md-6 portfolio-item first" data-aos="zoom-in" data-aos-delay="100">
                     <div class="portfolio-img rounded overflow-hidden">
                         <img class="img-fluid" src="img/project-1.jpg" alt="">
                         <div class="portfolio-btn">
@@ -382,7 +389,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second">
+                <div class="col-lg-4 col-md-6 portfolio-item second" data-aos="zoom-in" data-aos-delay="200">
                     <div class="portfolio-img rounded overflow-hidden">
                         <img class="img-fluid" src="img/project-2.jpg" alt="">
                         <div class="portfolio-btn">
@@ -391,7 +398,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first">
+                <div class="col-lg-4 col-md-6 portfolio-item first" data-aos="zoom-in" data-aos-delay="300">
                     <div class="portfolio-img rounded overflow-hidden">
                         <img class="img-fluid" src="img/project-3.jpg" alt="">
                         <div class="portfolio-btn">
@@ -400,7 +407,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second">
+                <div class="col-lg-4 col-md-6 portfolio-item second" data-aos="zoom-in" data-aos-delay="400">
                     <div class="portfolio-img rounded overflow-hidden">
                         <img class="img-fluid" src="img/project-4.jpg" alt="">
                         <div class="portfolio-btn">
@@ -409,7 +416,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first">
+                <div class="col-lg-4 col-md-6 portfolio-item first" data-aos="zoom-in" data-aos-delay="500">
                     <div class="portfolio-img rounded overflow-hidden">
                         <img class="img-fluid" src="img/project-5.jpg" alt="">
                         <div class="portfolio-btn">
@@ -418,7 +425,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second">
+                <div class="col-lg-4 col-md-6 portfolio-item second" data-aos="zoom-in" data-aos-delay="600">
                     <div class="portfolio-img rounded overflow-hidden">
                         <img class="img-fluid" src="img/project-6.jpg" alt="">
                         <div class="portfolio-btn">
@@ -490,7 +497,7 @@
     <!-- Contact Start -->
     <div class="container-xxl pb-5" id="contact">
         <div class="container py-5">
-            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="row g-5 mb-5 wow fadeInUp" data-aos="fade-up" data-aos-delay="100">
                 <div class="col-lg-6">
                     <h1 class="display-5 mb-0">Let's Work Together</h1>
                 </div>
@@ -499,7 +506,7 @@
                 </div>
             </div>
             <div class="row g-5">
-                <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-5 col-md-6 wow fadeInUp" data-aos="fade-up" data-aos-delay="200">
                     <p class="mb-2">My office:</p>
                     <h3 class="fw-bold">No 8 Alabama Street Eleyele Road, Ibadan</h3>
                     <hr class="w-100">
@@ -516,36 +523,36 @@
                         
                     </div>
                 </div>
-                <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="col-lg-7 col-md-6 wow fadeInUp" data-aos="fade-up" data-aos-delay="300">
                     
                     <form>
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                    <input type="text" class="form-control input-animate" id="name" placeholder="Your Name">
                                     <label for="name">Your Name</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                    <input type="email" class="form-control input-animate" id="email" placeholder="Your Email">
                                     <label for="email">Your Email</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                    <input type="text" class="form-control input-animate" id="subject" placeholder="Subject">
                                     <label for="subject">Subject</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
+                                    <textarea class="form-control input-animate" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
                                     <label for="message">Message</label>
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary py-3 px-5" type="submit">Send Message</button>
+                                <button class="btn btn-primary py-3 px-5 btn-animate" type="submit">Send Message</button>
                             </div>
                         </div>
                     </form>
@@ -571,7 +578,7 @@
 
 
     <!-- Copyright Start -->
-    <div class="container-fluid bg-dark text-white py-4">
+    <div class="container-fluid bg-dark text-white py-4" data-aos="fade-up" data-aos-delay="500">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
@@ -588,10 +595,132 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top btn-animate"><i class="bi bi-arrow-up"></i></a>
 
 
     <!-- JavaScript Libraries -->
+    <!-- AOS Animate On Scroll JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <!-- Particles.js for Hero Background -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <!-- Custom Animation Initialization -->
+    <script>
+        // Typed.js headline
+        document.addEventListener('DOMContentLoaded', function() {
+            new Typed('.typed-text', {
+                strings: [
+                    "AI-Accelerated Development",
+                    "Full-Stack Web & SaaS",
+                    "Smart, Scalable, Beautiful"
+                ],
+                typeSpeed: 55,
+                backSpeed: 30,
+                backDelay: 1200,
+                loop: true
+            });
+            // Navbar shrink & blur on scroll
+            window.addEventListener('scroll', function() {
+                const nav = document.getElementById('mainNav');
+                if (window.scrollY > 60) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
+            });
+            // Initialize AOS
+            AOS.init({
+                duration: 900,
+                once: true,
+                easing: 'ease-in-out'
+            });
+            // Particle background for hero
+            particlesJS('particles-js', {
+                "particles": {
+                    "number": { "value": 35 },
+                    "color": { "value": "#00cfff" },
+                    "shape": { "type": "circle" },
+                    "opacity": { "value": 0.15 },
+                    "size": { "value": 4 },
+                    "move": { "enable": true, "speed": 1.5 }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": { "enable": true, "mode": "repulse" }
+                    }
+                }
+            });
+        });
+    </script>
+    <!-- Custom CSS for Animations -->
+    <style>
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0; left: 0;
+            z-index: 0;
+            pointer-events: none;
+        }
+        #home {
+            position: relative;
+            overflow: hidden;
+        }
+        #mainNav.scrolled {
+            backdrop-filter: blur(8px);
+            box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+            padding-top: 0.5rem !important;
+            padding-bottom: 0.5rem !important;
+            transition: all 0.3s cubic-bezier(.4,0,.2,1);
+        }
+        .service-hover {
+            transition: transform 0.25s cubic-bezier(.4,0,.2,1), box-shadow 0.25s;
+        }
+        .service-hover:hover {
+            transform: scale(1.04);
+            box-shadow: 0 8px 32px rgba(0, 207, 255, 0.12);
+        }
+        .portfolio-img {
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+        .portfolio-img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 32px rgba(0, 207, 255, 0.18);
+        }
+        .skill .progress-bar {
+            transition: box-shadow 0.3s;
+        }
+        .skill:hover .progress-bar {
+            box-shadow: 0 0 16px 2px #00cfff, 0 0 8px 1px #fff;
+            animation: pulseGlow 1.2s infinite alternate;
+        }
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 8px #00cfff; }
+            100% { box-shadow: 0 0 24px #00cfff; }
+        }
+        .input-animate:focus {
+            border-color: #00cfff;
+            box-shadow: 0 0 8px #00cfff;
+            transition: box-shadow 0.3s;
+        }
+        .btn-animate {
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .btn-animate:hover {
+            box-shadow: 0 0 16px #00cfff;
+            transform: translateY(-2px) scale(1.04);
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: -20%; left: -20%;
+            width: 140vw; height: 140vh;
+            background: radial-gradient(circle at 60% 40%, #00cfff33 0%, transparent 60%);
+            z-index: -1;
+            pointer-events: none;
+            opacity: 0.5;
+        }
+    </style>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
